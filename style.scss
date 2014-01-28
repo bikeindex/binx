@@ -748,13 +748,13 @@ html {
   padding: 0; margin: 0;
 }
 
-// @media (min-width: 700px) {
-//   html { background: url(images/bg.jpg) no-repeat center center fixed; }
-// }
+@media (min-width: 700px) {
+  html { background: url(mosaics/mosaic_medium.jpg) no-repeat center center fixed; }
+}
 
-// @media (min-width: 1200px) {
-//   html { background: url(images/bg.jpg) no-repeat center center fixed; }
-// }
+@media (min-width: 1500px) {
+  html { background: url(mosaics/mosaic_large.jpg) no-repeat center center fixed; }
+}
 
 form {
   @include border-radius(3px);
@@ -844,5 +844,31 @@ input[type="text"] {
   &:active {
     @include box-shadow(0 0 1px rgba(black,.4));
     @include translate(1px,1px);
+  }
+}
+
+
+.mosaic-zoom {
+  @include border-radius(1em);
+  @include box-shadow(1px 1px 3px rgba(black,.5));
+  background: rgba($blueDarker,.82);
+  border: 1px solid rgba(lighten($blueDarker,20%),.1);
+  display: block;
+  position: fixed;
+  bottom: 30px; right: 2%;
+  padding: .5em;
+  opacity: .85;
+  text-decoration: none;
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  -o-transition: all .15s linear;
+  transition: all .15s linear;
+  img {
+    display: block;
+    width: 1.2em;
+    height: auto;
+  }
+  &:hover {
+    opacity: 1;
   }
 }

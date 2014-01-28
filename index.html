@@ -6,9 +6,9 @@
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
   <meta name="description" content="Bike Index URL shortener and quick code lookup. View this page on github at https://github.com/bikeindex/binx"/>
-  <link rel="shortcut icon" href="/fav.ico"/>
+  <link rel="shortcut icon" href="fav.ico"/>
   <link href="style.css" media="all" rel="stylesheet" type="text/css" />
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   
 </head>
 <body>
@@ -18,17 +18,24 @@
     <input class="btn" name="search" type="submit" value="Go" />
     <p class='alert'>Please enter a shortcode</p>
   </form>
+  
+  <a href="https://raw.github.com/bikeindex/binx/gh-pages/mosaics/mosaic.jpg" class="mosaic-zoom">
+    <img src="magnifying_glass.svg">
+  </a>
+
   <script type="text/javascript">
-    $("#form").submit(function(e) {
-      var code;
-      code = void 0;
-      e.preventDefault();
-      code = $("#code_field").val();
-      if (code.length > 0) {
-        return window.location.href = "http://binx.org/" + code;
-      } else {
-        return $('.alert').fadeIn(100);
-      }
+    $( document ).ready(function() {
+      $("#form").submit(function(e) {
+        var code;
+        code = void 0;
+        e.preventDefault();
+        code = $("#code_field").val();
+        if (code.length > 0) {
+          return window.location.href = "https://bikeindex.org/bikes/" + code;
+        } else {
+          return $('.alert').fadeIn(100);
+        }
+      });
     });
   </script>
 </body>
