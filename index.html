@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title lang='en'>Bike Index lookup</title>
+  <meta name="charset" content="utf-8"/>
+  <meta name="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta name="description" content="Bike Index URL shortener and quick code lookup. View this page on github at https://github.com/bikeindex/binx"/>
+  <link rel="shortcut icon" href="/fav.ico"/>
+  <link href="https://github.com/bikeindex/binx/blob/gh-pages/style.css?raw=true" media="all" rel="stylesheet" type="text/css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  
+</head>
+<body>
+  <form id='form'>
+    <h1><a href="https://bikeindex.org">Bike Index</a> code lookup</h1>
+    <input id='code_field' name='code_field' placeholder='Code or number' type='text'>
+    <input class="btn" name="search" type="submit" value="Go" />
+    <p class='alert'>Please enter a shortcode</p>
+  </form>
+  <script type="text/javascript">
+    $("#form").submit(function(e) {
+      var code;
+      code = void 0;
+      e.preventDefault();
+      code = $("#code_field").val();
+      if (code.length > 0) {
+        return window.location.href = "http://binx.org/" + code;
+      } else {
+        return $('.alert').fadeIn(100);
+      }
+    });
+  </script>
+</body>
+</html>

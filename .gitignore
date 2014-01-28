@@ -1,0 +1,4 @@
+# Ignore all tempfiles.
+/tmp
+.DS_Store
+.sass-cache/
