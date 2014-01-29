@@ -803,6 +803,9 @@ p {
   font-weight: 400;
   text-shadow: 0 0 5px rgba($stolenColor,.9);
 }
+@media (min-width: 759px) { 
+  p { bottom: 10px; }
+}
 
 input[type="text"] {
   @include border-radius(2px);
