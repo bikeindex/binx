@@ -762,15 +762,20 @@ form {
   @include clearfix;
   display: block;
   position: relative;
-  padding: 60px 20px;
-  margin: 50px auto 0;
+  padding: 30px 10px 40px;
+  margin: 30px auto 0;
   width: 100%;
   max-width: 600px; 
   background: rgba($blueDarker,.82);
   border: 1px solid rgba(lighten($blueDarker,20%),.1);
 }
 
-@media (min-width: 760px) { form { margin-top: 150px; } }
+@media (min-width: 760px) { 
+  form {
+    margin-top: 150px;
+    padding: 60px 20px;
+  }
+}
 
 h1 {
   margin: 0 0 1em;
