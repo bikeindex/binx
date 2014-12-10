@@ -7,7 +7,18 @@
 </head>
 <body>
   <script type="text/javascript">
-    window.location.href = 'https://bikeindex.org/bikes' + window.location.pathname;
+    
+    l = window.location.pathname;
+
+    if (l.match(/\/[a-z]+\d+$/ig)) {
+      mod = l.match(/[a-z]/ig)[0].toLowerCase().charCodeAt(0) - 96;
+      num = l.match(/\d+$/g);
+      l = "/scanned?card_id=-" + (num * mod);
+    }
+
+    window.location.href = 'https://bikeindex.org/bikes' + l;
+
+
   </script>
 </body>
 </html>
