@@ -14,8 +14,6 @@
       mod = l.match(/[a-z]/ig)[0].toLowerCase().charCodeAt(0) - 96;
       num = l.match(/\d+$/g);
       l = "/scanned?card_id=-" + (num * mod);
-    } else if (l.match(/\/\d+/)) {
-      l = "/bikes" + l;
     }
 
     window.location.href = 'https://bikeindex.org/bikes' + l;
